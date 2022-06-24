@@ -5,7 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Grooming.API.Model;
+using Grooming.Data.Model;
+using Grooming.Data.Models;
 
 namespace Grooming.API.Controllers
 {

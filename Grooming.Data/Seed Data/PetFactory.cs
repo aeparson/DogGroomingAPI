@@ -23,13 +23,15 @@ namespace Grooming.Data.SeedData
             "Norbert",
             "Rupert",
             "Alice",
-            "Minerva"
+            "Minerva",
+            "David"
         };
 
         public readonly List<string> _species = new()
         {
             "Dog",
-            "Cat"
+            "Cat",
+            "Lizard"
         };
 
         public readonly List<string> _breed = new()
@@ -43,7 +45,8 @@ namespace Grooming.Data.SeedData
             "Siamese",
             "Cavalier",
             "Corgi",
-            "Dalmation"
+            "Dalmation",
+            "Lab"
         };
 
         public readonly List<string> _fur = new()
@@ -56,6 +59,7 @@ namespace Grooming.Data.SeedData
             "Silky Coat",
             "Hairless",
             "Medium Coat",
+            "Coarse Coat"
         };
 
         public readonly List<string> _ownerName = new()
@@ -69,7 +73,8 @@ namespace Grooming.Data.SeedData
             "Barb",
             "Chuck",
             "Meagan",
-            "Ruth"
+            "Ruth",
+            "Katrina"
         };
         public readonly List<string> _ownerEmail1 = new()
         {
@@ -141,18 +146,18 @@ namespace Grooming.Data.SeedData
             return new Pet
             {
                 Id = id,
-                PetName = _petName[_rand.Next(0, 11)],
+                PetName = _petName[_rand.Next(0, 10)],
                 Age = _rand.Next(1, 25),
                 Weight = _rand.Next(1, 250),
-                Species = _species[_rand.Next(0, 3)],
-                Breed = _breed[_rand.Next(0, 11)],
-                Fur = _fur[_rand.Next(0, 9)],
-                OwnerName = _ownerName[_rand.Next(0, 11)],
+                Species = _species[_rand.Next(0, 2)],
+                Breed = _breed[_rand.Next(0, 9)],
+                Fur = _fur[_rand.Next(0, 8)],
+                OwnerName = _ownerName[_rand.Next(0, 10)],
                 OwnerEmail = $"{Email1}{Email2}",
                 OwnerPhone = GetRandomPhone()
             };
         }
-         
+
 
 
         /// <summary>
@@ -166,11 +171,11 @@ namespace Grooming.Data.SeedData
             builder.Append('-');
             builder.Append(_rand.Next(100, 999));
             builder.Append('-');
-            builder.Append(_rand.Next(100, 999));
+            builder.Append(_rand.Next(1000, 9999));
 
             return builder.ToString();
         }
 
-        
+
     }
 }

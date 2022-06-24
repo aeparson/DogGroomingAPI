@@ -4,6 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Catalyte.Apparel.API' " />
   <ItemGroup>
     <ProjectReference Include="..\Grooming.Data\Grooming.Data.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
